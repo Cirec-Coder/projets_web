@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(100, 148, 237, 0.4);
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+    background-blend-mode: soft-light;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0058), rgba(100, 148, 237, 0.25)), 
+    url(https://png.pngtree.com/png-vector/20200821/ourlarge/pngtree-a-group-of-fresh-and-delicious-colorful-fruits-png-image_2329752.jpg);
+    /* url(https://thumbs.dreamstime.com/b/fruit-de-nourriture-22881712.jpg); */
+    /* ,url(https://woody.cloudly.space/app/uploads/crt-reunion/2020/04/thumbs/fruits25_-_credit_irt_-_serge_gelabert_dts_12_2015-1920x960.jpg); */
+    background-position: center;
+    width: 100%;
+    height: 20%;
+}
+
+header img {
+    height: 85%;
+}
+
+header nav {
+    align-self: center;
+}
+
+header figure {
+    display: none;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Comic sans MS', serif;
+    align-self: center;
+    color: black;
+    text-shadow: 0px 0px 15px  white;
+}
+
+header h5 {
+    color: black;
+    text-shadow: 1px 1px  white;
+}
+
+header nav ul {
+    font-family: 'Comic sans MS', serif;
+    text-align: center;
+    list-style: none;
+    text-shadow: 1px 1px rgb(255 255 255);
+}
+header nav ul li > small {
+    text-shadow: none;
+}
+header nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#menu a {
+    text-decoration: none;
+    transition-duration: 0.25s;
+    transition-property: all;
+}
+
+#menu a:hover {
+    color: rgb(0, 34, 255);
+}
+
+#menu a:active {
+    /* simule une translation en X & Y de 2px */
+    color: rgba(40, 2, 80, 0.0991);
+    text-shadow: 1px 1px rgb(0 0 0);
+}
+
+.title .idx {
+    text-align: center;
+}
+
+.title:not(table.title) {
+    margin: 0.5em 0 0.5em 0;
+    text-align: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 60%;
+    font-family: 'Comic sans MS', serif;
+    font-size: 12px;
+    overflow: auto;
+}
+
+.add {
+    display: flex;
+    flex-direction: column;
+    padding: 0.85em;
+    border-radius: 0 2em 0 2em;
+    border: 1px solid black;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.571);
+    background-color: rgba(100, 148, 237, 0.3);
+}
+
+.add p {
+    width: 100%;
+    margin: 0.3em 0;
+}
+
+.add label {
+    float: right;
+}
+
+.add input {
+    max-width: 100%;
+    width: 11em;
+}
+
+input[type="number"] {
+    width: 6em;
+}
+
+input[type="submit"] {
+    margin: 0.5em 0 0 0;
+    padding: 0.05em 0.4em;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 5px;
+    background-color: #00208121;
+    float: right;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 0 black;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(239, 241, 95, 0.991);
+}
+
+input[type="submit"]:active {
+    transform: translateX(1px) translateY(1px);
+}
+
+table.title  {
+    border-collapse: collapse;
+    margin-left: 0px;
+}
+
+tr,
+th,
+td {
+    border: 0.1px solid black;
+    padding: 0.1em 0.2em;
+}
+
+.numbers {
+    text-align: right;
+}
+
+.numbers a {
+    color: #9f0606;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+
+.title thead th {
+    background-color: #00208166;
+}
+
+
+.title td:not(.tdEnd)  {
+    background-color: rgba(100, 148, 237, 0.4);
+}
+
+table .tdEnd {
+    border-right: hidden;
+    border-bottom: hidden;
+}
+
+.title td a #plus,
+.title td a #minus {
+    transform: scale(0.65);
+    transition: 0.25s;
+}
+
+.title th a #deleteAll {
+    margin-left: 2px;
+    color: #1a1111;
+    cursor: pointer;
+    transform: scale(0.75);
+    transition: 0.5s;
+    transition-property: all;
+}
+
+.title td a #delete {
+    margin-left: 2px;
+    color: rgb(55, 55, 53);
+    cursor: pointer;
+    transform: scale(0.75);
+    transition: 0.5s;
+    transition-property: all;
+}
+
+.title .thHead a {
+    margin-top: 1em;
+}
+
+.title .thHead a #sorted {
+    margin-top: 0.25em;
+    color: rgb(55, 55, 53);
+    cursor: pointer;
+    float: right;
+    transform: scale(0.75);
+    transition: 0.25s;
+}
+
+.title .thHead a #sorted-sorted {
+    margin-top: 0.2em;
+    color: rgb(199, 65, 50);
+    cursor: pointer;
+    float: right;
+    transform: scale(0.8);
+    transition: 0.25s;
+}
+
+.title td a #delete:hover,
+.title th a #deleteAll:hover {
+    color: rgba(239, 241, 95, 0.991);
+    transform: scale(1);
+}
+.title td a #plus:hover,
+.title td a #minus:hover {
+    transform: scale(1);
+}
+
+.title td a #delete:active,
+.title td a #deleteAll:active,
+.title td a #plus:active,
+.title td a #minus:active {
+    transform: scale(0.5);
+}
+
+
+.title th a #sorted:active {
+    transform: translateX(1px) translateY(1px) scale(0.65);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;    height: 5%;
+    align-self: normal;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(100, 148, 237, 0.2), rgba(100, 148, 237, 0.85)), url(https://thumbs.dreamstime.com/b/fruit-de-nourriture-22881712.jpg);
+    background-position-y: center;
+    background-blend-mode: soft-light;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
+    color: black;
+}
