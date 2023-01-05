@@ -1,0 +1,18 @@
+
+body{
+    background-image: url(../img/bkg.jpg);
+    background-repeat: repeat-y;
+}
+.card{
+    overflow: hidden;
+}
+
+.rating-color{
+    color:#fbc634 !important;
+}
+
+.text-shadow{
+    text-shadow: 1px 1px 1px #000;
+}
+
+
