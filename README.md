@@ -28,3 +28,4 @@
 #### Reproduction d'un jeu d'échec avec peu de code (avec image)
   - 1 version en javascript
   - 1 version en php
+  - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/echec/capture.jpg"  width="200" height="auto" />
