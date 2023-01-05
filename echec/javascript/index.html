@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gamePad" id="gamePad"></div>
+    </div>
+
+    <!-- <div> 
+        By en:User:Cburnett - File:Chess plt45.svg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=20363783
+    </div> -->
+    <script>
+
+        // récupère et stock la div avec l'id= "GamePad"
+        const gamePad = document.querySelector('#gamePad');
+        // crée un model de case de base
+        const box = document.createElement("div");
+        box.classList.add("case")
+
+        // le nom et la position des pièces
+        const pieces = ["tour", "cavalier", "fou", "reine", "roi", "fou", "cavalier", "tour",
+                        "pion", "pion", "pion", "pion", "pion", "pion", "pion", "pion"]
+
+
+
+        // function qui crée une nouvelle image 
+        // avec en paramètre la source
+        function createNewPiece(imageSrc){
+            const img = document.createElement("img");
+            img.src = imageSrc;
+            return img.cloneNode()
+        }
+
+        // crée le Game Pad
+        for (let i = 1; i <= 8; i++) {
+            // permet de faire la bascule entre case noire & blanche
+            box.classList.toggle("black");
+            for (let j = 1; j <= 8; j++) {
+                box.classList.toggle("black");
+                let newBox = box.cloneNode()
+                // les 2 premières lignes sont occupé par les noirs
+                if (i <= 2) {
+                    newBox.appendChild(createNewPiece("./img/" + pieces[(i-1) * 8 + j - 1] + "_n.png"));
+                    // newBox.innerText = pieces[(i-1) * 8 + j - 1] + " NOIR"
+                } 
+                // les 2 dernières lignes sont occupé par les blancs
+                else if (i >= 7) {
+                    newBox.appendChild(createNewPiece("./img/" + pieces[(8-i) * 8 + j - 1] + "_b.png"));
+                    // newBox.innerText = pieces[j + 8 - 1] + " BLANC"
+                } 
+
+
+                gamePad.appendChild(newBox)
+            }
+        }
+    </script>
+</body>
+
+</html>
