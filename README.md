@@ -1,2 +1,25 @@
 # projets_web
 ## Contient tous mes projets de Formation
+
+
+#### Reproductions de sites à partir de captures d'écran : 
+  - Simpson V1 & V2
+  - Site Elan
+    - responsive
+  - FakeBnB
+    - en Bootstrap
+
+
+#### Premiers pas en PHP
+  - algophp
+    - une première série de 15 éxercices en PHP
+  - algoPHPV2
+    - deuxième série de 15 éxercices 
+    
+#### Petite animation de contenu en CSS
+  - cards
+    
+    
+#### Reproduction d'un jeu d'échec avec peu de code
+  - 1 version en javascript
+  - 1 version en php
