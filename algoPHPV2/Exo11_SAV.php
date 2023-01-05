@@ -7,7 +7,7 @@
     <title>Exercices PHP-2 MMU V1.0</title>
 </head>
 <body>
-    <h1>Exercice 11</h1>
+    <h1>Exercice 11</h1> 
     <p>Ecrire une fonction personnalisée qui affiche une date en français (en toutes lettres) à partir d’une<br>
         chaîne de caractère représentant une date.<br>
         <strong>Exemple :</strong><br>
