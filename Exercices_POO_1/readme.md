@@ -1,4 +1,4 @@
-## 3 Exercices :
+## 3 Exercices en PHP :
 
 - Banque
 - Livres
