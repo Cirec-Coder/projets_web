@@ -10,16 +10,20 @@
     - en Bootstrap
 
 
+
 #### Premiers pas en PHP
   - algophp
     - une première série de 15 éxercices en PHP
   - algoPHPV2
     - deuxième série de 15 éxercices 
     
+    
+    
 #### Petite animation de contenu en CSS
   - cards
     
     
-#### Reproduction d'un jeu d'échec avec peu de code
+    
+#### Reproduction d'un jeu d'échec avec peu de code (avec image)
   - 1 version en javascript
   - 1 version en php
