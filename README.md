@@ -24,20 +24,19 @@
 #### Ma première appli php (first php app)
   - V1 basic 
   - V2 plus graphique et plus évoluée
-  - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/first%20php%20app/appli_v2.0/capture.jpg"  width="200" height="auto" />
-  -           
+    - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/first%20php%20app/appli_v2.0/capture.jpg"  width="200" height="auto" />
 
     
 #### Petite animation de contenu en CSS (au survol de la souris)
   - cards
-  - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/cards/capture.jpg"  width="200" height="auto" />
+    - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/cards/capture.jpg"  width="200" height="auto" />
     
     
     
 #### Reproduction d'un jeu d'échec avec peu de code (avec image)
   - 1 version en javascript
   - 1 version en php
-  - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/echec/capture.jpg"  width="200" height="auto" />
+    - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/echec/capture.jpg"  width="200" height="auto" />
 
 
 #### Application pdo poo
