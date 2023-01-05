@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* variables couleurs */
+    --film-color: rgb(188, 255, 80, 0.5);
+    --film-border-color: rgb(188, 255, 17, 0.5);
+    --gender-color: var(--film-color);
+    --gender-border-color: var(--film-border-color);
+    --actor-color: rgba(112, 80, 255, 0.5);
+    --actor-border-color: rgb(74, 33, 255, 0.5);
+    --real-color: rgba(255, 127, 80, 0.5);
+    --real-border-color: rgb(250, 79, 17, 0.5);
+    --role-color: rgb(255, 235, 80, 0.5);
+    --role-border-color: rgb(255, 235, 17, 0.5);
+    --casting-color: rgb(80, 255, 185, 0.5);
+    --casting-border-color: rgb(16, 255, 160, 0.5);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0058), rgba(205, 205, 205, 0.95)), 
+    url(../img/cinema.jpg);
+    background-position: center;
+    width: 100%;
+    height: 20%;
+}
+
+header img {
+    height: 85%;
+}
+
+header nav {
+    align-self: center;
+}
+
+
+header figure {
+    display: none;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Comic sans MS', serif;
+    align-self: center;
+    color: black;
+    text-shadow: 0px 0px 15px  white;
+}
+
+header h5 {
+    color: black;
+    text-shadow: 1px 1px  white;
+}
+
+header nav ul {
+    font-family: 'Comic sans MS', serif;
+    text-align: center;
+    list-style: none;
+    text-shadow: 1px 1px rgb(255 255 255);
+} 
+
+header nav ul li > small {
+    text-shadow: none;
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#menu a {
+    text-decoration: none;
+    transition-duration: 0.25s;
+    transition-property: all;
+}
+
+#menu a:hover {
+    color: rgb(0, 34, 255);
+}
+
+#menu a:active {
+    /* simule une translation en X & Y de 1px */
+    color: rgba(40, 2, 80, 0.0991);
+    text-shadow: 1px 1px rgb(0 0 0);
+}
+ 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75%;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* formulaire de l'index */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    padding: 0 4em;
+}
+
+/* arrondi les bords des boites de sélection */
+.form select {
+    border-radius: 3em;
+}
+
+ /* div qui englobe chaque partie du formulaire de l'index */
+.form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4em;
+    padding: 0.8em;
+}
+
+/* cible les div du formulaire de l'index */
+#show_film_real {
+    background-color: var(--real-color);
+    border: 1px solid var(--real-border-color);
+    border-radius: 1em;
+}
+
+#show_film_actor {
+    background-color: var(--actor-color);
+    border: 1px solid var(--actor-border-color);
+    border-radius: 1em;
+}
+
+#show_actor_role {
+    background-color: var(--role-color);
+    border: 1px solid var(--role-border-color);
+    border-radius: 1em;
+}
+
+#show_by_gender {
+    background-color: var(--gender-color);
+    border: 1px solid var(--gender-border-color);
+    border-radius: 1em;
+}
+
+#show_film_casting {
+    background-color: var(--casting-color);
+    border: 1px solid var(--casting-border-color);
+    border-radius: 1em;
+}
+
+/* cible le h3 dans le caption du tableau dans recap.php */
+#info-Table {
+    font-family: 'Comic sans MS', serif;
+    text-shadow: 1px 1px rgb(112, 112, 112);
+    cursor: default;
+    
+}
+
+/* cible les popup dans recap.php */
+.popup {
+    display: none;
+    position: absolute;
+    font-weight: 400;
+    background-color: #d7d9f2;
+    border: 3px solid #696969;
+    padding: 1em;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    text-align: justify;
+    padding: 0.5em;
+}
+
+/* le h3 du popup */
+.popup h3 {
+    text-align: center;
+    padding: 0.5em;
+}
+
+/* change la couleur en fonction du contenu */
+#info-td-film .popup, #popup-film {
+    background-color: var(--film-color);
+    border: 3px solid var(--film-border-color);
+}
+
+#info-td-acteur .popup, #popup-acteur{
+    background-color: var(--actor-color);
+    border: 3px solid var(--actor-border-color);
+}
+
+#info-td-realisateur .popup, #popup-realisateur {
+    background-color: var(--real-color);
+    border: 3px solid var(--real-border-color);
+}
+
+/* anime et affiche le popup */
+#info-Table:hover > .popup, 
+#info-td-film:hover > .popup, 
+#info-td-acteur:hover > .popup, 
+#info-td-realisateur:hover > .popup  {
+    display: block;
+    top: 21%;
+    right: 1%;
+    text-shadow: none;
+    animation-duration: 0.5s;
+    animation-name: zoomIn;
+	animation-iteration-count: 1;
+}
+
+/* animation zoomIn  */
+@keyframes zoomIn {
+    from {
+       transform: scale(0);
+   }
+   to {
+       transform: scale(1);
+    }
+}
+  
+/* ************************************************************************************ */
+
+/* cible les éléments du tableau <table> dans recap.php */
+td,
+th {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+caption {
+    padding: 10px;
+    caption-side: top;
+}
+
+table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+/* ************************************************************************************ */
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 5%;
+    align-self: normal;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.58), rgba(205, 205, 205, 0.95)), 
+    url(../img/cinema.jpg);
+    background-position-y: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
+    color: black;
+}
