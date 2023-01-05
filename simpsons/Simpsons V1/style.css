@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* permet de conserver la taille même avec bordure*/
+    box-sizing: border-box;
+}
+
+body {
+    background-color: goldenrod;
+}
+
+#wrapper {
+    width: 70%;
+    margin: auto;
+    background-color: antiquewhite;
+}
+
+.mainFig{
+    display: flex;
+}
+
+.mainFig img {
+    width: 100%;
+}
+
+main {
+    display: inline-flex;
+    padding: 2em 0.5em;
+}
+
+nav {
+    /* La propriété raccourcie flex permet de définir 
+       les valeurs de cette propriété dans cet ordre : 
+       flex-grow, flex-shrink, flex-basis. */
+    flex: 1 0 auto;
+    background-color: cornflowerblue;
+    text-align: center;
+    width: 15%;
+    height: 25%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;*/
+}
+
+nav ul li {
+    align-self: center;
+    padding: 0.2em 0;
+}
+
+h1 {
+    color: goldenrod;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    padding: 0.1em 0 0.3em 0;
+    /* haut | droit | bas | gauche */
+}
+
+article {
+    width: 100%;
+    padding: 0 0.5em;
+    /* 1em = 16px*/
+}
+
+article p,
+aside p {
+    text-align: justify;
+}
+
+aside {
+    color: white;
+    background-color: cornflowerblue;
+    width: 40%;
+    padding: 10px;
+}
+
+/* aside p {
+    text-align: justify;
+} */
+
+#imgMatt {
+    text-align: center;
+}
+
+#imgMatt img {
+    width: 70%;
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+}
+
+p {
+    padding: 5px;
+}
+
+footer {
+    color: white;
+    background-color: rgb(40, 82, 161);
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}

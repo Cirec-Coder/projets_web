@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #515151;
+    /* permet de conserver la taille même avec bordure*/
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+}
+
+body {
+    background-color: #80808080;
+}
+
+#divHeader {
+    display: flex;
+    padding-right: 20px;
+    background-color: rgb(255, 165, 0);
+    height: 20%;
+}
+
+#divHeader figure {
+    width: 20%;
+}
+
+#divHeader img {
+    float: right;
+    max-width: 30%;
+    margin: 1em;
+}
+
+#divHeader h3 {
+    width: 20%;
+    margin: auto 1em auto 1em;
+    color: #ffffffa5;
+    font-weight: 400;
+}
+
+nav {
+    width: 60%;
+    margin: auto 0 auto 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+}
+
+li a {
+    color: #ffffffa5;
+    text-decoration: none;
+    margin: 0 1em 0 1em;
+}
+
+#divStrasbourg {
+    background-image: url(./img/strasbourg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    text-align: center;
+    height: 400px;
+}
+
+#imgStrasbourg img {
+    width: 100%;
+    height: auto;
+}
+
+#divStrasbourg h1,
+#divStrasbourg h2 {
+    color: #ffffffa5;
+    position: relative;
+    top: 50%;
+}
+
+#formations {
+    margin: 2em 3.5em 0.5em 3.5em;
+}
+
+#equipe {
+    margin: 0.5em 3.5em 0.5em 3.5em;
+}
+
+#contact {
+    margin: 0.5em 3.5em 2em 3.5em;
+}
+
+#equipe figure {
+    display: flex;
+    flex-flow: wrap;
+    margin: inherit;
+    justify-content: center ;
+    align-items: center;
+}
+
+#equipe > figure> div {
+    margin: 1em;
+    position:relative;
+}
+
+#equipe div img {
+    border: 2px solid #ffa500c0;
+	box-shadow: 0px 0px 10px #444;
+}
+
+#equipe>figure>div >legend {
+    text-align: center;
+    width: 100%;
+    background-color: #ffa500c0;
+    color: white;
+    font-size: large;
+    margin: auto;
+    position : absolute;
+    bottom : 6px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#formations,
+#contact,
+#equipe {
+    padding: 2em;
+    background-color: white;
+    border: 1px dotted rgb(245, 124, 80);
+}
+
+#formations h3,
+#contact h3,
+#equipe h3 {
+    padding: 0 0 1em 0;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #515151;
+    color: white;
+    font-weight: normal;
+}
+
+table,
+th,
+td {
+    border: 1px solid #808080;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.3em 0 0.3em 0;
+}
+
+#lnom,
+#lobjet,
+#lmessage {
+    width: 100%;
+    border: 1px dotted rgb(245, 124, 80);
+    margin-bottom: 0.5em;
+}
+
+#lmessage {
+    height: 8em;
+}
+
+#lenvoyer {
+    width: 50%;
+    height: 3em;
+    background-color: #ffa500;
+    color: white;
+    border: 1px dotted rgb(245, 124, 80);
+    margin: 0.5em 0 1em 0;
+    border-radius: 3px;
+}
+
+footer {
+    background-color: #515151;
+    text-align: center;
+}
+
+small {
+    color: white;
+}
+
+@media screen and (max-width: 280px) {
+
+    #formations,
+    #equipe,
+    #contact {
+        padding: 2em 0.8em 2em 0.8em;
+    }
+
+    table tr {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    #divHeader {
+        font-size: small;
+    }
+
+    nav {
+        width: 70%;
+        margin: auto 0 auto 2em;
+    }
+
+    #formations {
+        margin: 2em 0.5em 0.5em 0.5em;
+    }
+
+    #equipe {
+        margin: 0.5em 0.5em 0.5em 0.5em;
+    }
+
+    /* #equipe div {
+        margin: auto;
+    } */
+
+    #contact {
+        margin: 0.5em 0.5em 2em 0.5em;
+    }
+
+}
+
+@media screen and (orientation: portrait) {
+    #divHeader img {
+        float: none;
+        max-width: 90%;
+        margin-left: 0.8em;
+    }
+
+    #divHeader figure {
+        width: 10%;
+        margin-right: 0.25em;
+    }
+
+    nav ul {
+        display: block;
+    }
+    /* #equipe h6 {
+        position: relative;
+        text-align: center;
+        top: 90%;
+        background-color: #ffa500c0;
+        color: white;
+        font-size: large;
+    } */
+    }
