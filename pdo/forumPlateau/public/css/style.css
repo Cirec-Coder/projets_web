@@ -1,0 +1,687 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    --imgSize: 18px;
+    /* box-sizing: inherit; */
+}
+
+/* body {
+    overflow: hidden;
+} */
+
+.board-img {
+    width: var(--imgSize);
+    height: var(--imgSize);
+    transition-property: all;
+}
+
+.board-img:hover, .board-img:hover .admin-board-btn {
+    transform: scale(1.1);
+    /* transition-property: all; */
+    transition-duration: 0.5s;
+}
+
+.board-img:active {
+    transform: scale(1.2);
+    transform: translateX(1px) translateY(1px);
+    transition-duration: 0.25s;
+}
+
+
+body {
+    /* display: none; */
+    /* background-color: #eee; */
+    height: 100vh;
+    /* width: 98vw; */
+    /* width: 90vw; */
+    margin: auto;
+}
+
+#wrapper {
+    /* display: flex; */
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+#mainpage {
+    height: 95%;
+    font-size: small;
+}
+
+#mainpage h1 {
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+
+#mainpage h1 small {
+    font-weight: normal;
+    font-size: large;
+    text-decoration: overline;
+    color: #888;
+    display: block;
+}
+
+/* si <small> n'est pas vide ֎ 
+  "small:not(:empty)" */
+#mainpage h1 small:not(:empty)::before , #mainpage h1 small:not(:empty)::after {
+    content: "    ";
+}
+
+.message-error {
+    color: red;
+}
+
+.message-success {
+    color: green;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    /* margin: 1em; */
+    padding-bottom: 1em;
+    height: 10%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: normal;
+    height: 5%;
+    text-align: center;
+    background-color: rgb(213, 213, 213);
+}
+
+
+h1 {
+    /* margin: auto; */
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+header nav>#nav-right,
+header nav>#nav-left {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+#forum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    /* height: 620px; */
+    height: 85%;
+    /* overflow: auto; */
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+.fa-user {
+    font-size: smaller;
+    color: darkslateblue;
+}
+
+.fa-user-graduate {
+    font-size: smaller;
+    color: firebrick;
+}
+
+.floating-back{
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    cursor: pointer;
+    background-color: #fff0;
+}
+.goBack-btn{
+    border: none;
+}
+
+.cards {
+    position: relative;
+    padding: 0.51em;
+    /* border: 1px solid black; */
+    border-radius: 1em;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    overflow: hidden;
+    /* margin: 2em; */
+    /* width: 98%; */
+}
+
+.profile-div{
+    min-width: 33%;
+}
+
+.pseudo-div{
+    width: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.grayed{
+    filter: grayscale(0.75);
+    background: linear-gradient(335deg, #48434357 15%, #d8d8d845 80%, #dfd6d645 5%);
+}
+
+.cards textarea{
+    width: 1050px; 
+    height: 40%;
+}
+
+.cards a {
+    text-decoration: none;
+    color: black;
+}
+
+/* .main-page {
+    height: 500px;
+} */
+
+.link-container {
+    /* position: absolute; */
+    /* float: left; */
+    /* height: 40%; */
+    padding: 0.5em;
+    /* align-self: flex-start; */
+    margin-bottom: 1em;
+}
+
+.link-register,
+.link-login {
+    /* height: 45%; */
+    margin: 1em;
+}
+
+.floating-right {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5em;
+    top: 8px;
+    right: 40px;
+}
+
+.static-board-img{
+    width: 24px;
+    height: 24px;
+}
+
+
+#add-post {
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    /* z-index: 1; */
+}
+
+.fa-plus {
+    color: rgb(89, 134, 22);
+}
+
+.topic-admin-board {
+    position: absolute;
+    display: flex;
+    column-gap: 1.5em;
+    top: 8px;
+    left: 80px;
+    /* z-index: 1; */
+}
+
+.post-admin-board {
+    position: absolute;
+    display: flex;
+    column-gap: 0.75em;
+    top: 1px;
+    right: 8px;
+    /* z-index: 1; */
+}
+
+.user-admin-board {
+    /* position: absolute;
+    display: flex;
+    column-gap: 0.75em; */
+    top: 8px;
+    /* right: 8px; */
+    /* z-index: 1; */
+}
+
+.cards:hover .floating {
+    transition-duration: 0.75s;
+}
+
+.topic-title,
+.msg-cards {
+    margin: 0 0 1em 0;
+}
+
+.topic-title:nth-child(even),
+.msg-cards:nth-child(even) {
+    background-color: rgba(235, 202, 202, 0.586);
+}
+
+#title-cards {
+    /* height: 75%; */
+    width: 98%;
+    /* overflow-y: auto; */
+    padding: 1em;
+    gap: 1em;
+    justify-content: center;
+    /* overflow-y: auto; */
+}
+
+#title-div {
+    border-bottom: 1px solid black;
+    margin-top: 1em;
+}
+
+.post-container {
+    height: 90%;
+    overflow-y: auto;
+    width: 100%;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+.msg-cards {
+    /* width: 98%; */
+    margin: auto;
+    height: 200px;
+    margin-bottom: 1em;
+}
+
+.msg-cards,
+.msg-cards p {
+    padding: 0;
+    /* margin: 0.5em 0; */
+}
+
+.msg-cards .msg-header {
+    padding: 0 1em;
+    background-color: #eee;
+    width: 100%;
+    height: 10%;
+}
+
+.msg-cards .msg-main {
+    display: flex;
+    flex-direction: row;
+    /* width: 98%; */
+    height: 80%;
+}
+
+.msg-cards .msg-user {
+    /* float: left; */
+    border-right: 1px solid gray;
+    padding: 1em;
+    /* margin: 1em 0; */
+    width: 20%;
+    background-color: rgba(196, 255, 233, 0.473);
+    /* height: 80%; */
+    /* height: 20px; */
+}
+
+.msg-user p {
+    margin-top: 0.5em;
+}
+
+.msg-cards .msg-msg {
+    /* float: right; */
+    padding: 0 0.5em;
+    margin: 1em 0;
+    width: 80%;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+}
+
+.msg-msg p {
+    white-space: pre-line;
+
+}
+
+.msg-cards .msg-footer {
+    /* float: bottom; */
+    background-color: rgb(232, 232, 232);
+    width: 100%;
+    height: 10%;
+}
+
+.pseudo-cards {
+    margin: 1em;
+    width: 300px;
+    /* height: 300px; */
+    text-align: center;
+    margin: auto;
+}
+
+/* #title-div .owner::before{
+    content: "\f501 ► ";
+    color: rgb(255, 0, 0);
+}
+
+#title-div .owner::after{
+    content: " ◄";
+    color: rgb(255, 0, 0);
+} */
+
+.topic-author {
+    position: relative;
+    right: 2px;
+    float: right;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25em;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form h2 small {
+    font-weight: normal;
+    font-size: 14px;
+    color: #888;
+    display: block;
+}
+
+/* form input {
+    margin-bottom: 0.5em;
+} */
+
+form button {
+    /* width: 100%; */
+    /* margin: 0.2em 0 0; */
+    padding: 0 5em;
+    cursor: pointer;
+}
+
+form button>.fa-key {
+    color: rgb(198, 150, 30);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0);
+}
+
+/* form starting stylings ------------------------------- */
+.admin-board-btn {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0;
+    font-size: large;
+    color: red;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input,
+textarea {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 1050px;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active state */
+input:focus~.bar:before,
+input:focus~.bar:after,
+textarea:focus~.bar:before,
+textarea:focus~.bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+input:focus~.highlight,
+textarea:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+
+
+
+
+/* CSS */
+.submit-btn {
+    /* align-items: center;
+  background-color: initial; */
+    background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+    border-radius: 42px;
+    border-width: 0;
+    box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px, rgba(179, 132, 201, 0.4) 0 8px 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    /* display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 18px; */
+    font-weight: 700;
+    /* justify-content: center; */
+    letter-spacing: .04em;
+    line-height: 16px;
+    margin: 0;
+    /* padding: 18px 18px; */
+    /* text-align: center;
+  text-decoration: none; */
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px, rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px, rgba(57, 31, 91, 0.32) 4px 4px 16px;
+    /* user-select: none;
+  -webkit-user-select: none; */
+    touch-action: manipulation;
+    /* vertical-align: baseline; */
+}
+
+.submit-btn:hover {
+    background-image: linear-gradient(#B384C9, #391F5B 50%);
+}
+
+@media (min-width: 768px) {
+    .submit-btn {
+        font-size: 21px;
+        padding: 18px 34px;
+    }
+}
+
+@media (max-width: 500px) {
+    * {
+        font-size: 12px;
+        /* padding: 18px 34px; */
+    }
+
+    .msg-cards .msg-main {
+        width: 90%;
+        /* font-size: 8px; */
+    }
+
+    .msg-cards .msg-user {
+        width: 40%;
+        font-size: 8px;
+    }
+
+    .msg-cards .msg-msg {
+        width: 60%;
+    }
+}
+
+
+.example1 {
+    width: 100%;
+    height: 50px; 
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .example1 h3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      line-height: 50px;
+      text-align: center;
+  
+      /* transition-property: all; */
+      /* Starting position */
+         -moz-transform:translateX(99%);
+         -webkit-transform:translateX(99%);  
+         transform:translateX(99%);
+  
+   /* Apply animation to this element */  
+         -moz-animation: example1 5s linear infinite;
+         -webkit-animation: example1 5s linear infinite;
+         animation: example1 5s linear infinite;
+  }
+  
+  /* Move it (define the animation) */
+        @-moz-keyframes example1 {
+         0%   { -moz-transform: translateX(99%); }
+
+         100% { -moz-transform: translateX(-99%); }
+        }
+        @-webkit-keyframes example1 {
+         0%   { -webkit-transform: translateX(99%); }
+
+         100% { -webkit-transform: translateX(-99%); }
+        }
+        @keyframes example1 {
+         0%   { 
+         -moz-transform: translateX(99%); /* Firefox bug fix */
+         -webkit-transform: translateX(99%); /* Firefox bug fix */
+         transform: translateX(99%);         
+         }
+
+         100% { 
+         -moz-transform: translateX(-99%); /* Firefox bug fix */
+         -webkit-transform: translateX(-99%); /* Firefox bug fix */
+         transform: translateX(-99%); 
+         }
+        }
+      

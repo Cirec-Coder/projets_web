@@ -1,0 +1,21 @@
+
+body{
+    display: none;
+    background-color: rgb(255, 111, 0);
+}
+
+
+#wrapper{
+    display: flex;
+    background-color: rgb(255, 111, 0);
+ }
+
+header nav > #nav-right{
+    display: flex;
+    flex-direction: row;
+    justify-self: right;
+    justify-content: right;
+}
+
+
+
