@@ -43,6 +43,6 @@
   - cinéma 
   - cinéma évoluée
     - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/pdo/cinema_01/capture.jpg"  width="200" height="auto" />
-  - plateau forum
+  - <a href="https://github.com/Cirec-Coder/projets_web/tree/master/pdo/forumPlateau">plateau forum</a>
     - plus poussé
     - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/pdo/forumPlateau/capture.jpg"  width="200" height="auto" />
