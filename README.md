@@ -38,3 +38,12 @@
   - 1 version en javascript
   - 1 version en php
   - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/echec/capture.jpg"  width="200" height="auto" />
+
+
+#### Application pdo poo
+  - cinéma 
+  - cinéma évoluée
+    - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/pdo/cinema_01/capture.jpg"  width="200" height="auto" />
+  - plateau forum
+    - plus poussé
+    - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/pdo/forumPlateau/capture.jpg"  width="200" height="auto" />
