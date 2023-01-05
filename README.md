@@ -10,6 +10,7 @@
     - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/Site%20Elan/capture.jpeg"  width="auto" height="150" />    
   - FakeBnB
     - en Bootstrap
+    - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/FakeBNB/capture.jpeg"  width="200" height="auto" />
 
 
 
