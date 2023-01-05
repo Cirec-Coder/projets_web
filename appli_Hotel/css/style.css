@@ -1,0 +1,366 @@
+/* initialise tous les éléments */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* pour un affichage centré
+   qui occupe tout l'écran */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100vh;
+    width: 100vw;
+}
+
+/* 
+    alignement des élément du header
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0058), rgba(205, 205, 205, 0.95)), 
+    url(../img/head.jpg);
+    background-position: center;
+    width: 100%;
+    height: 20%;  /* 20% pour le header 5% pour le footer et 75% pour le main */
+}
+
+/* taille de l'image 85% par rapport au parent: (header) */
+header img {
+    height: 85%;
+}
+
+/* Alignement de l'élément nav au centre */
+header nav {
+    align-self: center;
+}
+
+/* finalement j'ai décidé de ne pas afficher l'image  */
+header figure {
+    display: none;
+}
+
+/* alignement et justification des éléments de la div  */
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* font alignement couleur et ombre de h1 */
+header h1 {
+    font-family: 'Comic sans MS', serif;
+    align-self: center;
+    color: black;
+    text-shadow: 0px 0px 15px  white;
+}
+
+/* couleur & ombre pour h5 */
+header h5 {
+    color: black;
+    text-shadow: 1px 1px  white;
+}
+
+/* font alignement ombre & pas de puce pour ul */
+header nav ul {
+    font-family: 'Comic sans MS', serif;
+    text-align: center;
+    list-style: none;
+    text-shadow: 1px 1px rgb(255 255 255);
+}
+
+/* retire l'effet d'origine des raccourcis 
+   et luis assigne une couleur noir */
+header nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 
+ ajoute une transition sur la couleur
+*/
+#menu a {
+    text-decoration: none;
+    transition-duration: 0.25s;
+    transition-property: all;
+}
+
+/*
+ la transition se fait ici
+*/
+#menu a:hover {
+    color: rgb(0, 34, 255);
+}
+
+/*
+ simule une translation qu click
+*/
+#menu a:active {
+    /* simule une translation en X & Y de 1px */
+    color: rgba(40, 2, 80, 0.0991);
+    text-shadow: 1px 1px rgb(0 0 0);
+}
+
+/*
+ ajuste la hauteur du main à 75% + 20% du header + 5% du footer 
+*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75%;
+    overflow-y: auto;
+}
+
+/*
+ idem pour la div title-container
+ avec cette fois une hauteur à 100% du parent
+ et toujours en display: flex;
+ affichage en colone 
+ et justifier au centre
+*/
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/*
+ taille de la div table
+ à 100% de son parent
+*/
+.title-container .tableDiv {
+    height: 100%;
+}
+
+/*
+ justifie le h2 centré
+*/
+.title-container h2 {
+    text-align: center;
+}
+
+/*
+ position absolue::after
+ permet un positionnement libre
+ ic en bas à droite
+*/
+.frReset__div{
+    position: absolute;
+    bottom: 6%;
+    right: 1%;
+}
+
+/*
+  ================================ début =============================
+  défini le comportement des différents formulaires
+*/
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    padding: 0 4em;
+}
+
+#formReservation{
+    display: grid;
+    padding: 0.1em; 
+    gap: 0.1em;
+}
+
+.formHotel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    padding: 1em 1em 0 1em; 
+}
+
+.divFormHotel {
+    display: grid;
+    gap: 0.2em;
+    width: 100%;
+}
+
+.formHotel #select-hotel-div {
+    display: flex;
+    align-self: center;
+    gap: 0.1em;
+}
+
+.frm__Items {
+    display: flex;
+    align-self: flex-end;
+}
+/*
+  =========================== fin ==================================
+  défini le comportement des différents formulaires
+*/
+
+
+/*
+ largeur automatique
+ pour ces deux éléments
+*/
+.input__text, .input__number{
+    width: auto;
+}
+
+
+#formReservation input[type="submit"]{
+    margin-top: 0.5em;
+}
+
+input[type="checkbox"]{
+    float: right;
+    height: 1.5em;
+}
+
+/*
+  rotation du symbole wifi de FontAwsome de 45° vers la droite
+  et augmente sa taille
+*/
+.fa-solid{
+    transform: rotate(45deg);
+    font-size: larger;
+    
+}
+/* ************************************************************************************ */
+/*
+ dessine un cadre autour de chaque cellule
+ et une marge interne de 10px
+*/
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+/*
+ affichage d'une période dépassé  
+ représenté par une font en italic
+ de couleur grise et barrée
+*/
+#timeOut {
+    font-style: italic;
+    text-decoration: line-through;
+    color: #696969;
+}
+
+/*
+ cible toutes les lignes paire 
+ et leurs attribue une autre couleur de fond 
+ ce qui facilite la lecture
+*/
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+/*
+ change la couleur de fond du header du tableau
+ et la couleur du texte en blanc
+*/
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+/*
+ position et marge interne des titre de tableau
+*/
+caption {
+    padding: 10px;
+    caption-side: top;
+}
+
+/*
+ "soude" les bordures du tableau
+ une bordure extérieur de 2px
+ un espacement des lettre de 1px
+ une taille de font à 0.8rem
+*/
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+
+/*
+ défini la taille et la couleur du texte des états
+ "réservé" & "disponible"
+*/
+.state {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black;
+    margin: 1em;
+    padding: 0.25em;
+}
+
+/*
+ si reservé la couleur passe au "rouge" 
+*/
+#reserved {
+    background-color: #ff004c;
+    border-radius: 5px;
+    border: 1px solid #ff004c;
+}
+
+/*
+ si disponible la couleur passe au "turquoise"
+*/
+#disponible, #info{
+    background-color: #00ffb3;
+    border-radius: 5px;
+    border: 1px solid #00ffb3;
+}
+
+
+/*
+  ajoute au state une puce noire avant et après le texte
+  ce qui donne l'effet d'un panneau 
+*/
+#reserved::after, #reserved::before, 
+#disponible::after, #disponible::before, 
+#info::after, #info::before 
+{
+    content: " ● ";
+    color: rgba(0, 0, 0, 0.446);
+    text-shadow: none;
+}
+
+/* ************************************************************************************ */
+
+/*
+ définit la taille et la position du footer
+*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 5%;
+    align-self: normal;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.0058), rgba(205, 205, 205, 0.95)), 
+    url(../img/head.jpg);
+    background-position-y: bottom;
+}
+
+/*
+ retire la décoration du lien présent dans le footer
+ ajuste sa taille son poids et sa couleur
+*/
+footer a {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
+    color: black;
+}
