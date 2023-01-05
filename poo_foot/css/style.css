@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --boxShadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 
+    alignement des élément du header
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0058), rgba(205, 205, 205, 0.95)), 
+    url(../img/bkg.webp);
+    background-position: center;
+    width: 100%;
+    height: 20%;  /* 20% pour le header 5% pour le footer et 75% pour le main */
+}
+
+/* taille de l'image 85% par rapport au parent: (header) */
+header img {
+    height: 85%;
+}
+
+/* Alignement de l'élément nav au centre */
+header nav {
+    align-self: center;
+}
+
+/* finalement j'ai décidé de ne pas afficher l'image  */
+header figure {
+    /* display: none; */
+    height: 80%;
+    text-align: center;
+}
+
+/* alignement et justification des éléments de la div  */
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* font alignement couleur et ombre de h1 */
+header h1 {
+    font-family: 'Comic sans MS', serif;
+    align-self: center;
+    color: black;
+    text-shadow: 0px 0px 15px  white;
+}
+
+/* couleur & ombre pour h3 */
+header h3 {
+    color: black;
+    text-shadow: 1px 1px  white;
+}
+
+/* font alignement ombre & pas de puce pour ul */
+header nav ul {
+    font-family: 'Comic sans MS', serif;
+    text-align: center;
+    list-style: none;
+    text-shadow: 1px 1px rgb(255 255 255);
+}
+
+/* retire l'effet d'origine des raccourcis 
+   et lui assigne une couleur noir */
+header nav ul a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 
+ ajoute une transition sur la couleur
+*/
+#menu a {
+    text-decoration: none;
+    transition-duration: 0.25s;
+    transition-property: all;
+}
+
+/*
+ la transition se fait ici
+*/
+#menu a:hover {
+    color: rgb(0, 34, 255);
+}
+
+/*
+ simule une translation qu click
+*/
+#menu a:active {
+    /* simule une translation en X & Y de 1px */
+    color: rgba(40, 2, 80, 0.0991);
+    text-shadow: 1px 1px rgb(0 0 0);
+}
+
+/*  */
+main {
+    display: flex;
+}
+
+/* 
+ comportement & taille du conteneur principale 
+ ajuste la hauteur du main à  75% + 20% du header + 5% du footer 
+*/
+#container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 75%;
+    overflow-y: auto;
+}
+
+/* position, couleur et apparence du Menu */
+.menu{
+    position: relative;
+    align-items: center;
+    width: 20%;
+    height: 25px;
+    margin: auto;
+    border: 1px solid rgba(63, 63, 247, 0.594);
+    border-radius: 0 20px;
+    background-color: aquamarine;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+/* comportement du menu au passage de la souris */
+.menu:hover {
+    border-radius: 20px 0;
+    border: 1px solid rgb(253, 131, 151);
+    transition-duration: 0.5s;
+    background-color: pink;
+}
+
+/* Titre du Menu */
+.menu h3{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.18em;
+}
+
+
+/* Dropdown Content (caché par défaut) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    border: 1px solid black;
+    border-radius: 0 20px;
+    box-shadow: var(--boxShadow);  /*0px 8px 16px 0px rgba(0,0,0,0.5);*/
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .menu:hover .dropdown-content{
+    display: block;
+    animation-duration: 0.75s;
+    animation-name: fadeIn;
+	animation-iteration-count: 1;
+}
+
+/* animation fadeIn  */
+@keyframes fadeIn {
+    from {
+       opacity: 0;
+   }
+   to {
+       opacity: 1;
+    }
+}
+
+/* liens dans le dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change la couleur de font des a dans dropdown au survol de la souris*/
+  .dropdown-content a:hover {background-color: #aba7a7}
+  
+ 
+
+iframe {
+    width: 80%;
+    margin-bottom: 2em;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-radius: 0 40px;
+    box-shadow: var(--boxShadow);  /*0px 8px 16px 0px rgba(0,0,0,0.5);*/
+}
+  /* ************************************************************************************ */
+
+/*
+ définit la taille et la position du footer
+*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 5%;
+    align-self: normal;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.0058), rgba(205, 205, 205, 0.95)), 
+    url(../img/bkg.webp);
+    background-position-y: bottom;
+}
+
+/*
+ retire la décoration du lien présent dans le footer
+ ajuste sa taille son poids et sa couleur
+*/
+footer a {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
+    color: black;
+}
