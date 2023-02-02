@@ -27,6 +27,9 @@
     $nomsInput = array("Nom","Prénom","Ville");
 
     echo afficherInput($nomsInput);
+    // affiche le contenu de la variable contenant des balises html
+    // var_dump(htmlentities(afficherInput($nomsInput)));
+
 ?>
 </body>
 </html>
