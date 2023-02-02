@@ -34,8 +34,8 @@
     
     
 #### Reproduction d'un jeu d'échec avec peu de code (avec image)
-  - <a href="https://github.com/Cirec-Coder/projets_web/tree/master/echec/javascript">1 version en javascript</a>
-  - <a href="https://github.com/Cirec-Coder/projets_web/tree/master/echec/php">1 version en php</a></a>
+  - <a href="https://github.com/Cirec-Coder/projets_web/tree/master/echec/javascript">1 version en javascript</a> <a href="https://cirec-coder.github.io/projets_web/echec/javascript">Voir le résultat en "Live"</a>
+  - <a href="https://github.com/Cirec-Coder/projets_web/tree/master/echec/php">1 version en php</a>
     - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/echec/capture.jpg"  width="200" height="auto" />
 
 
