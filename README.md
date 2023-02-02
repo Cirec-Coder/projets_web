@@ -46,3 +46,12 @@
   - <a href="https://github.com/Cirec-Coder/projets_web/tree/master/pdo/forumPlateau">plateau forum</a>
     - plus poussé
     - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/pdo/forumPlateau/capture.jpg"  width="200" height="auto" />
+    
+    
+    
+#### Vibes (reproduction d'un site d'après une image)
+<a href="https://github.com/Cirec-Coder/projets_web/tree/master/vibes">Vibes</a>
+<a href="https://cirec-coder.github.io/projets_web/vibes">Voir en Live</a>
+
+
+
