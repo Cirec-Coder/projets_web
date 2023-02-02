@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Lancer Edge en utilisant localhost",
             "url": "http://localhost:/projets_web/vibes",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}" 
         },
         {
             "type": "chrome",
