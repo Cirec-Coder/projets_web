@@ -29,6 +29,7 @@
     
 #### Petite animation de contenu en CSS (au survol de la souris)
   - <a href="https://github.com/Cirec-Coder/projets_web/tree/master/cards">cards</a>
+    - Voir le résultat en <a href="https://cirec-coder.github.io/projets_web/cards">"Live"</a>
     - <img src="https://github.com/Cirec-Coder/projets_web/blob/master/cards/capture.jpg"  width="200" height="auto" />
     
     
