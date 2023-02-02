@@ -49,8 +49,8 @@
     
     
     
-#### <a href="https://github.com/Cirec-Coder/projets_web/tree/master/vibes">Vibes</a> (reproduction d'un site d'après une image)
-- Reproduire un site à partir d'une image
+#### <a href="https://github.com/Cirec-Coder/projets_web/tree/master/vibes">Vibes</a>
+  - Reproduire un site à partir d'une image
   - le rendre responsive
   - ajouter un menu burger
   - multiples animations & transitions (panorama, parallaxe fondu ...)
