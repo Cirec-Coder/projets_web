@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-logo {
+    width: 30%;
+}
+
+.ball-logo {
+    width: 5%;
+    margin-top: 3rem;
+    vertical-align: middle;
+}
+
+#cards {
+    position: absolute;
+    width: 100vw;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    position: relative;
+    box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.45);
+    transition: 550ms all ease-in-out;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.card:hover{
+    filter: saturate(150%);
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.card img {
+    padding: 0 2rem;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 100%;
+}
+
+.icon>img {
+    padding: 0;
+    height: 50%;
+    transform: translateX(-0%) translateY(50%);
+}

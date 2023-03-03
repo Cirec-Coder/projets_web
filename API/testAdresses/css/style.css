@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 1px white;
+}
+
+.text-male {
+    color: rgb(110, 110, 255);
+    text-shadow: 2px 2px 5px black;
+}
+
+.text-female {
+    color: rgb(255, 110, 170);
+    text-shadow: 2px 2px 5px black;
+}

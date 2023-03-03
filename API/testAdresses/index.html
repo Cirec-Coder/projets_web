@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Teste l'API Adresses</title>
+</head>
+
+<body>
+
+    <div class="row d-flex justify-content-center p-5 text-center">
+        <h1>Teste API Rest Adresses</h1>
+        <div class="row col-6 py-5">
+            <div class="col-12 text-start">
+                <!-- <form action="https://127.0.0.1:8000/api/adresses/" method="get"> -->
+                <label class="form-label" for="nom" id="lblName">Recherche par Nom</label>
+                <input class="form-control" type="text" name="nom" id="nom"
+                    placeholder="Ex. br (affiche tous les noms commencant par br)">
+                <label class="form-label pt-3" for="byName">Recherche par Nom</label>
+                <input type="checkbox" name="byName" id="byName" checked><span class="float-end pt-3 results"></span>
+                <div class="py-3"><button class="btn btn-primary" type="submit">Rechercher</button></div>
+                <!-- </form> -->
+                <!-- <datalist class="datalist" id="json-datalist" role="listbox"></datalist> -->
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 px-5 mb-5 mt-1" id="cards">
+        </div>
+        <!-- <div class="col-8 pt-2">
+            <div class="form-control" id="map" style="width:100%; height:500px"></div>
+
+        </div> -->
+    </div>
+
+
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+        <div id="liveToastMessage" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-warning">
+                <!-- <img src="..." class="rounded me-2" alt="..."> -->
+                <i class="fs-4 pe-2 text-shadow fa-solid fa-triangle-exclamation"></i>
+                <strong class="fs-4 me-auto text-shadow">INFORMATION</strong>
+                <!-- <small>11 mins ago</small> -->
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="fs-4 toast-body">
+                Aucun élément trouvé
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
