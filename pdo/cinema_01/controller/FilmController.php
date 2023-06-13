@@ -21,12 +21,19 @@ class FilmController
 
     public function showFilm($id)
     {
+        // connexion à la base de données
         $pdo = Connect::seConnecter();
 
-        $listFilms = $pdo->prepare("SELECT * FROM films, realisateurs, genres
-                                    WHERE :id = id_film AND realisateur_id = id_realisateur AND genre_id = id_genre");
-
+        // préparation de la requête avec des marqueurs 
+        //à la place des variables passées en paramètre
+        $listFilms = $pdo->prepare("SELECT * 
+            FROM films, realisateurs, genres
+            WHERE :id = id_film 
+            AND realisateur_id = id_realisateur 
+            AND genre_id = id_genre");
+        // on lie les paramètres aux marqueurs
         $listFilms->bindParam(':id', $id);
+        // et on exécute la requête
         $listFilms->execute();
 
         require "view/list/filmCards.php";
